@@ -9,6 +9,7 @@ module.exports = async function(env, argv) {
     stream: require.resolve('stream-browserify'),
     process: require.resolve('process/browser'),
     crypto: require.resolve('crypto-browserify'),
+    vm: false,  // <-- Add this line to tell webpack not to polyfill 'vm'
   };
 
   config.plugins = [
